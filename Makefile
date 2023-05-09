@@ -51,8 +51,9 @@ install: venv install-reqs
 install-reqs:
 	@echo $(H1)Updating package tools$(H1END)
 	$(VENV_PIP) install --upgrade pip wheel build
-	$(VENV_PIP) install --upgrade pyOpenSSL
+	$(VENV_PIP) install pyOpenSSL=22.1.0
 	$(VENV_PIP) install urllib3==1.26.7
+	$(VENV_PIP) install cryptography
 	
 	@echo $(H1)Installing dev requirements$(H1END)
 	$(VENV_PIP) install --upgrade '.[dev]' '.[test]'
