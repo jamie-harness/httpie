@@ -51,7 +51,7 @@ install: venv install-reqs
 install-reqs:
 	@echo $(H1)Updating package tools$(H1END)
 	$(VENV_PIP) install --upgrade pip wheel build
-	$(VENV_PIP) install --upgrade urllib3
+	$(VENV_PIP) install urllib3==1.26.7
 	
 	@echo $(H1)Installing dev requirements$(H1END)
 	$(VENV_PIP) install --upgrade '.[dev]' '.[test]'
